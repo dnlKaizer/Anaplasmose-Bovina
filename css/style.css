@@ -1,14 +1,65 @@
+/* Fontes */
 @font-face {
     font-family: 'Poppins';
-    src: url('../fonts/Poppins-Regular.ttf') format('truetype');
+    src: url('../font/Poppins-Regular.ttf') format('truetype');
     font-weight: normal;
     font-style: normal; /* ou oblique, ou normal oblique */
 }
 
 @font-face {
     font-family: 'League Spartan';
-    src: url('../fonts/LeagueSpartan-VariableFont_wght.ttf') format('truetype');
+    src: url('../font/LeagueSpartan-VariableFont_wght.ttf') format('truetype');
     font-weight: 100 900; /* intervalo permitido */
     font-stretch: 75% 125%; /* opcional: largura variável */
     font-style: normal; /* ou oblique, ou normal oblique */
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'League Spartan', sans-serif; /* Fonte League Spartan */
+    font-weight: 700; /* Peso da fonte */
+}
+p, span, a, li, div {
+    font-family: 'Poppins', sans-serif; /* Fonte Poppins */
+    font-weight: 400; /* Peso da fonte */
+}
+
+/* Classes para testar blocos */
+.bg-green {
+    background-color: #00B140;
+}
+.bg-blue {
+    background-color: #0072CE;
+}
+.bg-yellow {
+    background-color: #F6EB61;
+}
+.bg-red {
+    background-color: #FF0000;
+}
+
+/* Configurações do banner */
+.banner-overlay {
+    background: rgba(0, 0, 0, 0.45);
+    z-index: 1;
+}
+.banner-card {
+    position: absolute;
+    left: 10%;
+    width: 50%;
+    height: 100%;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    background-color: #AFD480; /* Cor de fundo azul */
+    color: white; /* Cor do texto */
+
+    padding-inline: 10%;
+    z-index: 2;
+}
+.banner-card h1 {
+    font-size: 4rem; /* Tamanho do título */
+    margin-bottom: 1rem; /* Espaçamento abaixo do título */
 }
