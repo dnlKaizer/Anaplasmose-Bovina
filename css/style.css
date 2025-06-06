@@ -1,0 +1,14 @@
+@font-face {
+    font-family: 'Poppins';
+    src: url('../fonts/Poppins-Regular.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal; /* ou oblique, ou normal oblique */
+}
+
+@font-face {
+    font-family: 'League Spartan';
+    src: url('../fonts/LeagueSpartan-VariableFont_wght.ttf') format('truetype');
+    font-weight: 100 900; /* intervalo permitido */
+    font-stretch: 75% 125%; /* opcional: largura variável */
+    font-style: normal; /* ou oblique, ou normal oblique */
+}
