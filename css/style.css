@@ -18,6 +18,16 @@
     /* ou oblique, ou normal oblique */
 }
 
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
 h1,
 h2,
 h3,
@@ -45,6 +55,7 @@ div {
     text-align: justify;
     /* Justifica o texto */
 }
+
 .bg-texture {
     background-image: url('../img/textura-op30.png');
     /* ajuste o caminho */
@@ -223,13 +234,22 @@ div {
 .accordion-container {
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
+
 .accordion-btn {
-    padding: 30px;
+    width: 60px;
+    height: 60px;
     background-color: rgba(175, 212, 128, 1);
     color: white;
     border: none;
     cursor: pointer;
+    transition: background-color 0.3s ease-in-out;
 }
+
+.accordion-btn:hover {
+    transition: background-color 0.3s ease-in-out;
+    background-color: rgb(98, 173, 63);
+}
+
 .accordion-topico {
     font-family: 'League Spartan', sans-serif;
     font-weight: 500;
@@ -239,7 +259,18 @@ div {
     background-color: green;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
+
 .card-body {
     border: none;
     border-radius: 0;
+}
+
+.accordion-btn .plus-vert {
+    transition: transform 0.3s cubic-bezier(0.4,0,0.2,1);
+    transform-origin: 50% 50%;
+}
+
+.accordion-btn[aria-expanded="true"] .plus-vert {
+    transform: rotate(90deg);
+    /* Ou use: opacity: 0; para sumir a linha vertical */
 }
