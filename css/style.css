@@ -34,6 +34,7 @@ h3,
 h4,
 h5,
 h6 {
+    margin: 0;
     font-family: 'League Spartan', sans-serif;
     /* Fonte League Spartan */
     font-weight: 700;
@@ -45,15 +46,27 @@ span,
 a,
 li,
 div {
+    text-align: justify;
     font-family: 'Poppins', sans-serif;
     /* Fonte Poppins */
     font-weight: 400;
+    margin: 0;
     /* Peso da fonte */
 }
 
 .text-justify {
     text-align: justify;
     /* Justifica o texto */
+}
+
+.overlay {
+    background: rgba(0, 0, 0, 0.45);
+    z-index: 1;
+}
+
+.overlay-gradient {
+    background: linear-gradient(0deg, rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0));
+    z-index: 1;
 }
 
 .bg-texture {
@@ -81,11 +94,6 @@ div {
 }
 
 /* Configurações do banner */
-.banner-overlay {
-    background: rgba(0, 0, 0, 0.45);
-    z-index: 1;
-}
-
 .banner-card {
     position: absolute;
     left: 10%;
