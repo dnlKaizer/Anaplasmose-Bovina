@@ -34,3 +34,15 @@ $('a[href*="#"]')
             }
         }
     });
+
+// Slide cards
+    $('.info-card').each(function() {
+        $(this).mouseover(function() {
+            $(this).addClass('active');
+          $('.info-container').children('.info-card').not('.active').addClass('inactive');
+        });
+        $(this).mouseleave(function() {
+            $(this).removeClass('active');
+            $('.info-container').children('.info-card').not('.active').removeClass('inactive');
+        });
+    });

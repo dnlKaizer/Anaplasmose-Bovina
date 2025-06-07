@@ -3,36 +3,68 @@
     font-family: 'Poppins';
     src: url('../font/Poppins-Regular.ttf') format('truetype');
     font-weight: normal;
-    font-style: normal; /* ou oblique, ou normal oblique */
+    font-style: normal;
+    /* ou oblique, ou normal oblique */
 }
 
 @font-face {
     font-family: 'League Spartan';
     src: url('../font/LeagueSpartan-VariableFont_wght.ttf') format('truetype');
-    font-weight: 100 900; /* intervalo permitido */
-    font-stretch: 75% 125%; /* opcional: largura variável */
-    font-style: normal; /* ou oblique, ou normal oblique */
+    font-weight: 100 900;
+    /* intervalo permitido */
+    font-stretch: 75% 125%;
+    /* opcional: largura variável */
+    font-style: normal;
+    /* ou oblique, ou normal oblique */
 }
 
-h1, h2, h3, h4, h5, h6 {
-    font-family: 'League Spartan', sans-serif; /* Fonte League Spartan */
-    font-weight: 700; /* Peso da fonte */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-family: 'League Spartan', sans-serif;
+    /* Fonte League Spartan */
+    font-weight: 700;
+    /* Peso da fonte */
 }
-p, span, a, li, div {
-    font-family: 'Poppins', sans-serif; /* Fonte Poppins */
-    font-weight: 400; /* Peso da fonte */
+
+p,
+span,
+a,
+li,
+div {
+    font-family: 'Poppins', sans-serif;
+    /* Fonte Poppins */
+    font-weight: 400;
+    /* Peso da fonte */
+}
+
+.text-justify {
+    text-align: justify;
+    /* Justifica o texto */
+}
+.bg-texture {
+    background-image: url('../img/textura-op30.png');
+    /* ajuste o caminho */
+    background-repeat: repeat;
+    background-size: auto;
 }
 
 /* Classes para testar blocos */
 .bg-green {
     background-color: #00B140;
 }
+
 .bg-blue {
     background-color: #0072CE;
 }
+
 .bg-yellow {
     background-color: #F6EB61;
 }
+
 .bg-red {
     background-color: #FF0000;
 }
@@ -42,6 +74,7 @@ p, span, a, li, div {
     background: rgba(0, 0, 0, 0.45);
     z-index: 1;
 }
+
 .banner-card {
     position: absolute;
     left: 10%;
@@ -53,19 +86,27 @@ p, span, a, li, div {
     align-items: center;
     justify-content: center;
 
-    background-color: rgba(175, 212, 128, 0.8); /* Cor de fundo azul */
-    color: white; /* Cor do texto */
+    background-color: rgba(175, 212, 128, 0.8);
+    /* Cor de fundo azul */
+    color: white;
+    /* Cor do texto */
 
     padding-inline: 10%;
     z-index: 2;
 }
+
 .banner-card h1 {
-    font-size: 4rem; /* Tamanho do título */
-    margin-bottom: 1rem; /* Espaçamento abaixo do título */
+    font-size: 4rem;
+    /* Tamanho do título */
+    margin-bottom: 1rem;
+    /* Espaçamento abaixo do título */
 }
+
 .banner-card p {
-    font-size: 1.5rem; /* Tamanho do parágrafo */
-    margin-bottom: 2rem; /* Espaçamento abaixo do parágrafo */
+    font-size: 1.5rem;
+    /* Tamanho do parágrafo */
+    margin-bottom: 2rem;
+    /* Espaçamento abaixo do parágrafo */
 }
 
 /* Configurações dos índices */
@@ -74,15 +115,19 @@ p, span, a, li, div {
     color: white;
     border-bottom: 2px solid #AFD480;
 }
-.indice-card-container {
-    gap: 20px; /* Espaçamento entre os cards */
+
+.indice-container {
+    gap: 20px;
+    /* Espaçamento entre os cards */
 }
-.indice-card-container:hover > :not(:hover) {
+
+.indice-container:hover> :not(:hover) {
     opacity: .4;
     transform: scale(0.9);
 }
+
 .indice-card {
-    transition: .35;
+    transition: transform 0.35s ease-in-out, opacity 0.35s ease-in-out;
     cursor: pointer;
 
     text-decoration: none;
@@ -92,11 +137,89 @@ p, span, a, li, div {
     width: 150px;
     height: 150px;
 }
+
 .indice-card img {
     width: 70px;
     height: 70px;
 }
+
 .indice-card p {
     color: black;
+    margin: 0;
+}
+
+/* Introdução */
+.introducao h2 {
+    display: inline;
+    color: #00B140;
+    border-bottom: 2px solid #AFD480;
+}
+
+/* Slide cards */
+.info-container {
+    /* max-width: 635px; */
+    width: 100%;
+    height: 400px;
+    -webkit-transition: all 0.25s ease-in-out;
+    -moz-transition: all 0.25s ease-in-out;
+    -ms-transition: all 0.25s ease-in-out;
+    -o-transition: all 0.25s ease-in-out;
+    transition: all 0.25s ease-in-out;
+}
+
+.info-card {
+    background: green;
+    width: 202px;
+    -webkit-transform-origin: 50% 50%;
+    height: inherit;
+    margin: 0 7px 0 0;
+    display: inline-block;
+    -webkit-transition: all 0.25s ease-in-out;
+    -moz-transition: all 0.25s ease-in-out;
+    -ms-transition: all 0.25s ease-in-out;
+    -o-transition: all 0.25s ease-in-out;
+    transition: all 0.25s ease-in-out;
+    -webkit-transform: translate3d(0, 0, 0);
+    -moz-transform: translate3d(0, 0, 0);
+    -ms-transform: translate3d(0, 0, 0);
+    -o-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0);
+}
+
+.info-card.active {
+    width: 282px;
+    -webkit-transition: all 0.25s ease-in-out;
+    -moz-transition: all 0.25s ease-in-out;
+    -ms-transition: all 0.25s ease-in-out;
+    -o-transition: all 0.25s ease-in-out;
+    transition: all 0.25s ease-in-out;
+}
+
+.info-card.inactive {
+    width: 162px;
+    -webkit-transition: all 0.25s ease-in-out;
+    -moz-transition: all 0.25s ease-in-out;
+    -ms-transition: all 0.25s ease-in-out;
+    -o-transition: all 0.25s ease-in-out;
+    transition: all 0.25s ease-in-out;
+    opacity: 0.4;
+}
+
+.info-card.franklin {
+    background: url('http://www.eduardmayer.de/codepen-css-resources/images/gta/franklin.jpeg') 45% 0 no-repeat;
+    background-size: cover;
+}
+
+.info-card.michael {
+    background: url('http://www.eduardmayer.de/codepen-css-resources/images/gta/michael.jpeg') 45% 0 no-repeat;
+    background-size: cover;
+}
+
+.info-card.trevor {
+    background: url('http://www.eduardmayer.de/codepen-css-resources/images/gta/trevor.jpeg') 45% 0 no-repeat;
+    background-size: cover;
+}
+
+.info-card:last-of-type {
     margin: 0;
 }
