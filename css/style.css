@@ -65,7 +65,7 @@ div {
 }
 
 .overlay-gradient {
-    background: linear-gradient(0deg, rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0));
+    background: linear-gradient(0deg, rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0));
     z-index: 1;
 }
 
@@ -203,7 +203,7 @@ div {
 }
 
 .info-card.active {
-    width: 282px;
+    width: 362px;
     -webkit-transition: all 0.25s ease-in-out;
     -moz-transition: all 0.25s ease-in-out;
     -ms-transition: all 0.25s ease-in-out;
@@ -212,13 +212,13 @@ div {
 }
 
 .info-card.inactive {
-    width: 162px;
+    width: 182px;
     -webkit-transition: all 0.25s ease-in-out;
     -moz-transition: all 0.25s ease-in-out;
     -ms-transition: all 0.25s ease-in-out;
     -o-transition: all 0.25s ease-in-out;
     transition: all 0.25s ease-in-out;
-    opacity: 0.4;
+    /* opacity: 0.4; */
 }
 
 /* .info-card.franklin {
