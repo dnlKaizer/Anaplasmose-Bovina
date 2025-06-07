@@ -36,10 +36,30 @@ $('a[href*="#"]')
     });
 
 // Slide cards
-    $('.info-card').each(function() {
-        $(this).mouseover(function() {
-            $('.info-container').children('.info-card').addClass('inactive');
-            $(this).removeClass('inactive');
-            $(this).addClass('active');
-        });
+$('.info-card').each(function () {
+    $(this).mouseover(function () {
+        $('.info-container').children('.info-card').addClass('inactive');
+        $(this).removeClass('inactive');
+        $(this).addClass('active');
     });
+});
+
+// Animação Slide In ao aparecer na tela
+const observer = new IntersectionObserver((entries, obs) => {
+    entries.forEach(entry => {
+        if (entry.isIntersecting) {
+            $(entry.target).addClass('slide-in');
+            obs.unobserve(entry.target); // anima só uma vez
+        }
+    });
+}, { threshold: 0.2 });
+
+// Animação Slide In
+$(document).ready(function () {
+    $('.accordion-container').each(function () {
+        observer.observe(this);
+    });
+    $('.indice-card').each(function () {
+        observer.observe(this);
+    });
+});
