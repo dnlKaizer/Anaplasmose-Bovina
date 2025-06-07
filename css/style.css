@@ -53,7 +53,7 @@ p, span, a, li, div {
     align-items: center;
     justify-content: center;
 
-    background-color: #AFD480; /* Cor de fundo azul */
+    background-color: rgba(175, 212, 128, 0.8); /* Cor de fundo azul */
     color: white; /* Cor do texto */
 
     padding-inline: 10%;
@@ -62,4 +62,41 @@ p, span, a, li, div {
 .banner-card h1 {
     font-size: 4rem; /* Tamanho do título */
     margin-bottom: 1rem; /* Espaçamento abaixo do título */
+}
+.banner-card p {
+    font-size: 1.5rem; /* Tamanho do parágrafo */
+    margin-bottom: 2rem; /* Espaçamento abaixo do parágrafo */
+}
+
+/* Configurações dos índices */
+.indice-text {
+    display: inline;
+    color: white;
+    border-bottom: 2px solid #AFD480;
+}
+.indice-card-container {
+    gap: 20px; /* Espaçamento entre os cards */
+}
+.indice-card-container:hover > :not(:hover) {
+    opacity: .4;
+    transform: scale(0.9);
+}
+.indice-card {
+    transition: .35;
+    cursor: pointer;
+
+    text-decoration: none;
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: 150px;
+    height: 150px;
+}
+.indice-card img {
+    width: 70px;
+    height: 70px;
+}
+.indice-card p {
+    color: black;
+    margin: 0;
 }
