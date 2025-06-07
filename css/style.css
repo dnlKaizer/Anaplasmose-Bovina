@@ -205,7 +205,7 @@ div {
     opacity: 0.4;
 }
 
-.info-card.franklin {
+/* .info-card.franklin {
     background: url('http://www.eduardmayer.de/codepen-css-resources/images/gta/franklin.jpeg') 45% 0 no-repeat;
     background-size: cover;
 }
@@ -218,7 +218,7 @@ div {
 .info-card.trevor {
     background: url('http://www.eduardmayer.de/codepen-css-resources/images/gta/trevor.jpeg') 45% 0 no-repeat;
     background-size: cover;
-}
+} */
 
 .info-card:last-of-type {
     margin: 0;

@@ -38,11 +38,13 @@ $('a[href*="#"]')
 // Slide cards
     $('.info-card').each(function() {
         $(this).mouseover(function() {
+            $('.info-container').children('.info-card').addClass('inactive');
+            $(this).removeClass('inactive');
             $(this).addClass('active');
-          $('.info-container').children('.info-card').not('.active').addClass('inactive');
+            // $('.info-container').children('.info-card').not('.active').addClass('inactive');
         });
-        $(this).mouseleave(function() {
-            $(this).removeClass('active');
-            $('.info-container').children('.info-card').not('.active').removeClass('inactive');
-        });
+        // $(this).mouseleave(function() {
+        //     $(this).removeClass('active');
+        //     $('.info-container').children('.info-card').not('.active').removeClass('inactive');
+        // });
     });
