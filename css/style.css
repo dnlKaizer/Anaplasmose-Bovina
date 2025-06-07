@@ -116,11 +116,6 @@ div {
     border-bottom: 2px solid #AFD480;
 }
 
-.indice-container {
-    gap: 20px;
-    /* Espaçamento entre os cards */
-}
-
 .indice-container:hover> :not(:hover) {
     opacity: .4;
     transform: scale(0.9);
@@ -222,4 +217,29 @@ div {
 
 .info-card:last-of-type {
     margin: 0;
+}
+
+/* Accordion */
+.accordion-container {
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+.accordion-btn {
+    padding: 30px;
+    background-color: rgba(175, 212, 128, 1);
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+.accordion-topico {
+    font-family: 'League Spartan', sans-serif;
+    font-weight: 500;
+    font-size: 1.5rem;
+
+    color: white;
+    background-color: green;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+.card-body {
+    border: none;
+    border-radius: 0;
 }
