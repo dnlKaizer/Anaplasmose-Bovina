@@ -102,6 +102,8 @@ div {
     color: white;
     /* Cor do texto */
 
+    animation: fadeIn 2s ease-in-out;
+
     padding-inline: 10%;
     z-index: 2;
 }
