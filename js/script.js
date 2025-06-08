@@ -59,7 +59,4 @@ $(document).ready(function () {
     $('.accordion-container').each(function () {
         observer.observe(this);
     });
-    $('.indice-card').each(function () {
-        observer.observe(this);
-    });
 });
