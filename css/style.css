@@ -104,6 +104,17 @@ div {
     background-size: auto;
 }
 
+.shadow-green {
+    box-shadow: -5px 5px rgba(175, 212, 128, 0.8);
+    /* Sombra suave */
+}
+
+.container-topico > div > h2 {
+    display: inline;
+    border-bottom: 2px solid #AFD480;
+    color: #00B140;
+}
+
 .rotate {
     transform: rotate(-90deg);
     transform-origin: bottom left;
