@@ -386,7 +386,7 @@ figcaption {
 }
 
 /* Prevenção e Controle */
-#prevencao > .container {
+.container-carousel {
     height: 300px;
 }
 
