@@ -60,3 +60,31 @@ $(document).ready(function () {
         observer.observe(this);
     });
 });
+
+// Carousel
+$(document).ready(function () {
+    let currentIndex = 0;
+    const $carouselInner = $('.carousel-inner');
+    const $cards = $('.carousel-card');
+    const cardWidth = $('.carousel-card').outerWidth(true) + 36; // inclui largura + margem
+    const totalSlides = $('.carousel-card').length;
+    $('.carousel-inner').css('width', cardWidth * totalSlides + 'px');
+
+    // Ajusta a largura total da .carousel-inner
+    $carouselInner.css('width', cardWidth * totalSlides + 'px');
+
+    function updateCarousel() {
+        const offset = -currentIndex * cardWidth;
+        $carouselInner.css('transform', 'translateX(' + offset + 'px)');
+    }
+
+    $('#nextBtn').on('click', function () {
+        currentIndex = (currentIndex + 1) % totalSlides;
+        updateCarousel();
+    });
+
+    $('#prevBtn').on('click', function () {
+        currentIndex = (currentIndex - 1 + totalSlides) % totalSlides;
+        updateCarousel();
+    });
+});

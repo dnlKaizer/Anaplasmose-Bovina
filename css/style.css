@@ -1,3 +1,8 @@
+/* 
+Verde Escuro: rgba(1, 102, 23, 1)
+Verde Claro: rgba(175, 212, 128, 0.8)
+*/
+
 /* Fontes */
 @font-face {
     font-family: 'Poppins';
@@ -43,7 +48,7 @@
 @keyframes slideInLeft {
     from {
         opacity: 0;
-        transform: translateX(-30vw);
+        transform: translateX(-10vw);
     }
     to {
         opacity: 1;
@@ -75,6 +80,14 @@ div {
     font-weight: 400;
     margin: 0;
     /* Peso da fonte */
+}
+
+/* Remover estilo do botão */
+button {
+    background: none;
+    border: none;
+    padding: 0;
+    cursor: pointer;
 }
 
 .text-justify {
@@ -112,7 +125,7 @@ div {
 .container-topico > div > h2 {
     display: inline;
     border-bottom: 2px solid #AFD480;
-    color: #00B140;
+    color: rgba(1, 102, 23, 1);
 }
 
 .rotate {
@@ -123,7 +136,7 @@ div {
 
 /* Classes para testar blocos */
 .bg-green {
-    background-color: #00B140;
+    background-color: rgba(1, 102, 23, 1);
 }
 
 .bg-blue {
@@ -149,7 +162,6 @@ figcaption {
 /* Configurações do banner */
 .banner {
     height: 100vh;
-    /* height: 400px; */
 }
 
 .banner-card {
@@ -164,14 +176,14 @@ figcaption {
     align-items: center;
     justify-content: center;
 
-    background-color: rgba(175, 212, 128, 0.8);
+    background-color: rgba(36, 180, 60, 0.6);
     /* Cor de fundo azul */
     color: white;
     /* Cor do texto */
 
     animation: fadeIn 2s ease-in-out;
 
-    padding-inline: 10%;
+    padding-inline: 5%;
     z-index: 2;
 }
 
@@ -190,6 +202,10 @@ figcaption {
 }
 
 /* Configurações dos índices */
+.indice {
+    background-color: #016617;
+}
+
 .indice-text {
     display: inline;
     color: white;
@@ -350,7 +366,7 @@ figcaption {
     font-size: 1.5rem;
 
     color: white;
-    background-color: green;
+    background-color: rgba(1, 102, 23, 1);
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
@@ -367,4 +383,56 @@ figcaption {
 .accordion-btn[aria-expanded="true"] .plus-vert {
     transform: rotate(90deg);
     /* Ou use: opacity: 0; para sumir a linha vertical */
+}
+
+/* Prevenção e Controle */
+#prevencao > .container {
+    height: 300px;
+}
+
+#prevencao button img {
+    width: 48px;
+    height: 48px;
+}
+
+.carousel-card {
+    border-radius: 30px;
+    display: flex;
+    overflow: hidden; /* garante que as bordas internas respeitem o arredondado */
+    width: 800px;
+    height: 300px;
+}
+
+.carousel-number {
+    width: 80px;
+    background-color: rgba(1, 102, 23, 1);
+}
+
+.carousel-text {
+    background-color: rgba(175, 212, 128, 1);
+    padding-left: 2rem;
+    padding-right: 2rem;
+    font-size: 1rem;
+    flex: 1;
+}
+.carousel-text {
+    color: rgba(1, 102, 23, 1);
+}
+
+.carousel-wrapper {
+    width: 800px;
+    height: 300px;
+    position: relative;
+    overflow: hidden;
+}
+
+.carousel-inner {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+    height: 100%;
+    gap: 36px; /* ou o valor que preferir */
+}
+
+.transition {
+    transition: transform 0.5s ease;
 }
