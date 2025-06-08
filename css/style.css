@@ -147,7 +147,13 @@ figcaption {
 }
 
 /* Configurações do banner */
+.banner {
+    height: 100vh;
+    /* height: 400px; */
+}
+
 .banner-card {
+    display: none;
     position: absolute;
     left: 10%;
     width: 50%;
