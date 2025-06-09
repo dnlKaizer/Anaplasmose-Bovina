@@ -113,6 +113,10 @@ button {
     z-index: 1;
 }
 
+.green-shadow {
+    text-shadow: 1px 1px rgba(49, 49, 49, 0.61);
+}
+
 .bg-texture {
     background-image: url('../img/textura-op30.png');
     /* ajuste o caminho */
@@ -142,21 +146,10 @@ button {
     background-color: rgba(1, 102, 23, 1);
 }
 
-.bg-blue {
-    background-color: #0072CE;
-}
-
-.bg-yellow {
-    background-color: #F6EB61;
-}
-
-.bg-red {
-    background-color: #FF0000;
-}
-
-.bg-white {
-    background-color: #FFFFFF;
-}
+.bg-green-gradient {
+    background: linear-gradient(0deg, rgba(1, 102, 23, 1), rgb(0, 65, 15));
+    background: radial-gradient(rgba(1, 102, 23, 1), rgb(0, 49, 11));
+} 
 
 figcaption {
     font-size: 0.8rem;
@@ -391,11 +384,6 @@ figcaption {
     /* Ou use: opacity: 0; para sumir a linha vertical */
 }
 
-/* Prevenção e Controle */
-.container-carousel {
-    height: 300px;
-}
-
 #prevencao button img {
     width: 48px;
     height: 48px;
@@ -407,7 +395,7 @@ figcaption {
     overflow: hidden;
     /* garante que as bordas internas respeitem o arredondado */
     width: 800px;
-    height: 300px;
+    height: 360px;
 }
 
 .carousel-number {
@@ -417,19 +405,20 @@ figcaption {
 
 .carousel-text {
     background-color: rgba(175, 212, 128, 1);
+    color: rgba(1, 102, 23, 1);
     padding-left: 2rem;
     padding-right: 2rem;
-    font-size: 1rem;
     flex: 1;
 }
-
-.carousel-text {
-    color: rgba(1, 102, 23, 1);
+.carousel-text p {
+    font-family: 'League Spartan', sans-serif;
+    font-weight: 500;
+    font-size: 1.3rem;
 }
 
 .carousel-wrapper {
     width: 800px;
-    height: 300px;
+    height: 360px;
     position: relative;
     overflow: hidden;
 }
@@ -481,11 +470,11 @@ figcaption {
     height: 100%;
     -webkit-backface-visibility: hidden;
     backface-visibility: hidden;
+    text-shadow: 1px 1px rgba(49, 49, 49, 0.61);
 }
 
 .flip-card-front h1 {
     font-size: 13rem;
-    text-shadow: 5px 5px 1px rgba(49, 49, 49, 0.61);
 }
 
 .flip-card-back {
@@ -495,5 +484,5 @@ figcaption {
 .flip-card-back p {
     font-family: 'League Spartan', sans-serif;
     font-weight: 500;
-    font-size: 1.2rem;
+    font-size: 1.3rem;
 }
