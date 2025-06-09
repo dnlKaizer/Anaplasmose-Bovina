@@ -7,8 +7,8 @@ $('.info-card').each(function () {
     });
 });
 
-// Animação Slide In ao aparecer na tela
-const observer = new IntersectionObserver((entries, obs) => {
+// Animação Slide In Left ao aparecer na tela
+const observerSlideInLeft = new IntersectionObserver((entries, obs) => {
     entries.forEach(entry => {
         if (entry.isIntersecting) {
             $(entry.target).addClass('slide-in');
@@ -17,10 +17,29 @@ const observer = new IntersectionObserver((entries, obs) => {
     });
 }, { threshold: 0.2 });
 
+// Animação Slide In Bottom ao aparecer na tela
+const observerSlideInBottom = new IntersectionObserver((entries, obs) => {
+    entries.forEach(entry => {
+        if (entry.isIntersecting) {
+            $(entry.target).addClass('slide-in-bottom');
+            obs.unobserve(entry.target); // anima só uma vez
+        }
+    });
+}, { threshold: 0.05 });
+
+
 // Animação Slide In
 $(document).ready(function () {
     $('.accordion-container').each(function () {
-        observer.observe(this);
+        observerSlideInLeft.observe(this);
+    });
+
+    $('.bg-green.shadow-green').each(function () {
+        observerSlideInLeft.observe(this);
+    });
+
+    $('.section-content').each(function () {
+        observerSlideInBottom.observe(this);
     });
 });
 

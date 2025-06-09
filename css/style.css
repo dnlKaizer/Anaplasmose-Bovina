@@ -59,6 +59,18 @@ Verde Claro: rgba(175, 212, 128, 0.8)
     }
 }
 
+@keyframes slideInBottom {
+    from {
+        opacity: 0;
+        transform: translatey(10vw);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
 a {
     word-break: break-word;
 }
@@ -148,6 +160,11 @@ button {
 
 .subtopico {
     text-align: left;
+}
+
+section.slide-in-bottom {
+    animation: slideInBottom 0.75s ease-in-out;
+    opacity: 1;
 }
 
 /* Classes para testar blocos */
@@ -533,9 +550,11 @@ figcaption {
     transform: scale(1.05);
 }
 
+.section-content {
+    opacity: 0;
+}
+
 /* Responsividade */
-
-
 @media (max-width: 1199px) {
     .banner-card h1 {
         font-size: 3.5rem;
@@ -548,6 +567,10 @@ figcaption {
     .carousel-card, .carousel-wrapper {
         width: 720px;
         height: 420px;
+    }
+
+    #slice-cards {
+        display: none;
     }
 }
 
