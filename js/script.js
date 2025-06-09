@@ -75,3 +75,12 @@ $(document).ready(function () {
         updateCarousel();
     });
 });
+
+/* Seta do topo */
+$(window).scroll(function () {
+    if ($(this).scrollTop() > 300) {
+        $('#btnTop').fadeIn();
+    } else {
+        $('#btnTop').fadeOut();
+    }
+});
