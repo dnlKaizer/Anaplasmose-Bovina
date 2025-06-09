@@ -1,10 +1,15 @@
 // Slide cards
 $('.info-card').each(function () {
-    $(this).mouseover(function () {
-        $('.info-container').children('.info-card').addClass('inactive');
+    if ($(window).width() > 1200) {
+        $(this).mouseover(function () {
+            $('.info-container').children('.info-card').addClass('inactive');
+            $(this).removeClass('inactive');
+            $(this).addClass('active');
+        });
+    } else {
         $(this).removeClass('inactive');
-        $(this).addClass('active');
-    });
+        $('.info-container').children('.info-card').addClass('active');
+    }
 });
 
 // Animação Slide In Left ao aparecer na tela
