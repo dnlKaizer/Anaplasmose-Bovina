@@ -76,6 +76,7 @@ p,
 span,
 a,
 li,
+ul,
 div {
     text-align: justify;
     font-family: 'Poppins', sans-serif;
@@ -146,9 +147,8 @@ button {
     background-color: rgba(1, 102, 23, 1);
 }
 
-.bg-green-gradient {
-    background: linear-gradient(0deg, rgba(1, 102, 23, 1), rgb(0, 65, 15));
-    background: radial-gradient(rgba(1, 102, 23, 1), rgb(0, 49, 11));
+.bg-light-green {
+    background-color: rgba(175, 212, 128, 1);
 } 
 
 figcaption {
@@ -460,7 +460,6 @@ figcaption {
 
 .flip-card-front,
 .flip-card-back {
-    background: linear-gradient(-45deg, rgba(1, 102, 23, 1), rgba(175, 212, 128, 1));
     top: 0;
     left: 0;
     position: absolute;
@@ -489,4 +488,13 @@ figcaption {
 
 #referencias a {
     color: rgb(98, 173, 63);
+}
+
+.header-text {
+    text-decoration: none;
+}
+/* Animação de hover do header text */
+.header-text:hover {
+    text-shadow: 0 0 2px #fff;
+    transform: scale(1.05);
 }
