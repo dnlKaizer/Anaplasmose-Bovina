@@ -660,7 +660,7 @@ figcaption {
     .carousel-card,
     .carousel-wrapper {
         width: calc(100vw - 36px);
-        height: 660px;
+        height: 540px;
     }
 
     .carousel-text {
@@ -673,5 +673,15 @@ figcaption {
 
     .carousel-text p {
         font-size: 1.1rem;
+    }
+}
+
+@media (max-width: 479px) {
+    .carousel-text h3 {
+        font-size: 1.2rem;
+    }
+
+    .carousel-text p {
+        font-size: 1rem;
     }
 }
