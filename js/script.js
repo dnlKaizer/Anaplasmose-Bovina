@@ -78,7 +78,13 @@ $(document).ready(function () {
 
 /* Seta do topo */
 $(window).scroll(function () {
-    if ($(this).scrollTop() > 300) {
+    let tam;
+    if ($(window).height() < $(window).width()) {
+        tam = $(window).height() / 4;
+    } else {
+        tam = $(window).height() / 2; 
+    }
+    if ($(this).scrollTop() > (2 * tam)) {
         $('#btnTop').fadeIn();
     } else {
         $('#btnTop').fadeOut();
