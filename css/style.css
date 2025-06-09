@@ -146,6 +146,10 @@ button {
     white-space: nowrap;
 }
 
+.subtopico {
+    text-align: left;
+}
+
 /* Classes para testar blocos */
 .bg-green {
     background-color: rgba(1, 102, 23, 1);
@@ -153,7 +157,7 @@ button {
 
 .bg-light-green {
     background-color: rgba(175, 212, 128, 1);
-} 
+}
 
 figcaption {
     font-size: 0.8rem;
@@ -314,9 +318,17 @@ figcaption {
     opacity: 0;
 }
 
+.info-card.active>.info-card-text-below * {
+    display: none;
+}
+
 .info-card.inactive>.info-card-text-below {
     animation: zeroFade 0.35s ease-in-out;
     opacity: 1;
+}
+
+.info-card.inactive>.info-card-text-below * {
+    display: block;
 }
 
 .info-card.active>.info-card-text {
@@ -324,8 +336,16 @@ figcaption {
     opacity: 1;
 }
 
+.info-card.active>.info-card-text * {
+    display: block;
+}
+
 .info-card.inactive>.info-card-text {
     opacity: 0;
+}
+
+.info-card.inactive>.info-card-text * {
+    display: none;
 }
 
 .info-card-text-below h3 {
@@ -414,6 +434,7 @@ figcaption {
     padding-right: 2rem;
     flex: 1;
 }
+
 .carousel-text p {
     font-family: 'League Spartan', sans-serif;
     font-weight: 500;
@@ -445,6 +466,8 @@ figcaption {
     width: 300px;
     height: 300px;
     perspective: 1000px;
+    max-width: calc(100vw - 20px);
+    max-height: calc(100vw - 20px);
 }
 
 .flip-card-inner {
@@ -497,6 +520,7 @@ figcaption {
 .header-text {
     text-decoration: none;
 }
+
 /* Animação de hover do header text */
 .header-text:hover {
     text-shadow: 0 0 2px #fff;
@@ -505,17 +529,56 @@ figcaption {
 
 /* Responsividade */
 
-/* CELULARES PEQUENOS */
-@media (max-width: 575px) {
 
-}
+@media (max-width: 1199px) {
+    .banner-card h1 {
+        font-size: 3.5rem;
+    }
 
-/* CELULARES E TABLETS */
-@media (max-width: 767px) {
-
+    .banner-card p {
+        font-size: 1.25rem;
+    }
 }
 
 /* TABLETS */
 @media (max-width: 991px) {
+    .container-flip-card {
+        flex-direction: column !important;
+    }
 
+    .banner-card {
+        width: 60%;
+    }
+
+    .banner-card h1 {
+        font-size: 3.4rem;
+    }
+}
+
+/* CELULARES E TABLETS */
+@media (max-width: 767px) {
+    #prevencao {
+        display: none;
+    }
+
+    .banner-card {
+        left: 0;
+        width: 100%;
+        height: 60%;
+    }
+}
+
+/* CELULARES PEQUENOS */
+@media (max-width: 575px) {
+    .accordion-topico {
+        font-size: 1.2rem;
+    }
+
+    .banner-card h1 {
+        font-size: 2.4rem;
+    }
+
+    .banner-card p {
+        font-size: 1.2rem;
+    }
 }
