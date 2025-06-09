@@ -50,4 +50,9 @@ $(document).ready(function () {
         currentIndex = (currentIndex - 1 + totalSlides) % totalSlides;
         updateCarousel();
     });
+
+    $('#prevBtnMobile').on('click', function () {
+        currentIndex = (currentIndex - 1 + totalSlides) % totalSlides;
+        updateCarousel();
+    });
 });
