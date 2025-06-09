@@ -216,7 +216,7 @@ figcaption {
     border-bottom: 2px solid #AFD480;
 }
 
-.indice-container:hover> :not(:hover) {
+.indice-container:hover > div > :not(:hover) {
     opacity: .4;
     transform: scale(0.9);
 }
@@ -537,6 +537,10 @@ figcaption {
 
     .banner-card p {
         font-size: 1.25rem;
+    }
+
+    #introducao .bloco-imagem {
+        
     }
 }
 
