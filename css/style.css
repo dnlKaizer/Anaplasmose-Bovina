@@ -349,11 +349,11 @@ figcaption {
 }
 
 .info-card.active>.info-card-text {
-    animation: fadeIn 0.35s ease-in-out;
     opacity: 1;
 }
 
 .info-card.active>.info-card-text * {
+    animation: zeroFade 0.35s ease-in-out;
     display: block;
 }
 
